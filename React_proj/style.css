@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+#root {
+  height: 100%;
+  width: 100%;
+}
+#root .nav {
+  height: 40px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 40px;
+}
+#root .nav #left {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 35px;
+}
+#root .nav #left #img {
+  height: 30px;
+  width: 30px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#root .nav #left .link {
+  font-size: 1rem;
+}
+#root .nav #right {
+  text-decoration: underline;
+}
+#root .page {
+  width: 100%;
+  height: 90%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  position: relative;
+}
+#root .page .rotate {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  transform-origin: left center;
+  left: 20px;
+  bottom: 0;
+  transform: rotate(-90deg);
+  padding: 10px;
+  gap: 20px;
+  color: gray;
+}
+#root .page .rotate .line {
+  width: 60vh;
+  background-color: gray;
+  height: 2px;
+}
+#root .page .left {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 40px;
+}
+#root .page .left .main {
+  display: flex;
+  gap: 30px;
+}
+#root .page .left .middle .heading {
+  font-size: 14rem;
+  font-weight: 100;
+}
+#root .page .left .middle .para {
+  font-size: 1.3rem;
+}
+#root .page .left .bottom {
+  font-size: 1.2rem;
+}
+#root .page .profile {
+  height: 100%;
+}
+#root .page .profile img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}/*# sourceMappingURL=style.css.map */
