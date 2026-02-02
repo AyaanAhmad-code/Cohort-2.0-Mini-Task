@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+html {
+  font-family: monospace;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  background-color: black;
+}
+main h1 {
+  padding: 5px 10px;
+  color: #00FF00;
+  font-weight: 700;
+  font-size: 4rem;
+}
+main h1:hover {
+  background-color: #001801;
+}
+main h2 {
+  font-size: 4rem;
+  padding: 5px 10px;
+  background: linear-gradient(to right, rgb(181, 10, 181), #3B2DA5);
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+}
+main p {
+  color: #00b800;
+  padding: 5px 10px;
+  font-size: 2rem;
+  font-weight: 100;
+}
+main p:hover {
+  background-color: #001801;
+}/*# sourceMappingURL=style.css.map */
