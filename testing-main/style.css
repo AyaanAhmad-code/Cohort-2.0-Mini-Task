@@ -1,0 +1,52 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow: hidden;
+}
+
+main {
+  width: min(100%, 1600px);
+  padding: 0.6rem;
+  gap: 0.8rem;
+  display: grid;
+  background-image: url(https://i.pinimg.com/736x/80/f4/29/80f4297787ceb89111962a3d51363277.jpg);
+  background-position: center;
+  background-size: cover;
+  grid-template-columns: 1.1fr 1fr 1fr 1fr;
+  grid-template-rows: auto auto;
+  grid-template-areas: "card1 card2 card2 card2" "card1 card3 card4 card5";
+}
+main div {
+  border-radius: 1.5rem;
+  background-position: center;
+  background-size: cover;
+}
+main .card1 {
+  grid-area: card1;
+  grid-row: span 2;
+  background-image: url(https://i.pinimg.com/736x/49/d9/e0/49d9e0cb7a957911859ac3a719c19ad1.jpg);
+}
+main .card2 {
+  grid-area: card2;
+  aspect-ratio: 26/9;
+  background-image: url(https://i.pinimg.com/736x/a2/26/e7/a226e75eeb059316247d5482eb5e09c0.jpg);
+}
+main .card3 {
+  grid-area: card3;
+  aspect-ratio: 1/1;
+  background-image: url(https://i.pinimg.com/1200x/91/88/c8/9188c8c793e194455dec39e871a71de5.jpg);
+}
+main .card4 {
+  grid-area: card4;
+  aspect-ratio: 1/1;
+  background-image: url(https://i.pinimg.com/736x/8c/d2/ea/8cd2ea9617cc5fc76ac79250f02787dc.jpg);
+}
+main .card5 {
+  grid-area: card5;
+  aspect-ratio: 1/1;
+  background-image: url(https://i.pinimg.com/736x/d1/40/77/d14077dd8dc820f72fa1395fef6ed6e2.jpg);
+}/*# sourceMappingURL=style.css.map */
