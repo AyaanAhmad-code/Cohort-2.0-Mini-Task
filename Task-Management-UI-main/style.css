@@ -1,0 +1,268 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #f7f7f7;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "helvetica now display";
+}
+
+.note-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  position: relative;
+}
+
+/* Left icon buttons */
+.left-icons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.left-icons button {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: white;
+  border: none;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  font-size: 18px;
+}
+
+/* Right color dots */
+.right-colors {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.dot {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.black {
+  background: black;
+}
+.purple {
+  background: #a855f7;
+}
+.orange {
+  background: #fb923c;
+}
+.teal {
+  background: #14b8a6;
+}
+
+/* Stack */
+.stack {
+  position: relative;
+  width: 400px;
+  height: 200px;
+}
+
+.card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: white;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.card:nth-child(1) {
+  z-index: 3;
+}
+.card:nth-child(2) {
+  z-index: 2;
+  transform: translateY(10px) scale(0.98);
+  opacity: 0.9;
+}
+.card:nth-child(3) {
+  z-index: 1;
+  transform: translateY(20px) scale(0.96);
+  opacity: 0.7;
+}
+
+/* Card content */
+.avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+h1 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 17px;
+  color: #555;
+  margin-bottom: 6px;
+}
+
+.buttons {
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+button.call {
+  background: black;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+  border: none;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+button.msg {
+  background: #eee;
+  color: black;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+  border: none;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.form-container {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 99999;
+  background: white;
+  padding: 24px;
+  border-radius: 22px;
+  width: 32rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+.form-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+h2 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+}
+
+input[type="text"] {
+  padding: 10px 14px;
+  border-radius: 14px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+  margin-top: 6px;
+}
+
+.tag-checkbox input[type="radio"]{
+    display: none;
+}
+
+.tag-checkbox{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+}
+.tag-checkbox p{
+    font-size: 1rem;
+    font-weight: 100;
+}
+
+.tag-checkbox span {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: inline;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: 0.2s;
+    margin-left: 8px;
+}
+
+.tag-checkbox input[value="emergency"] + span {
+  background: black; /* red */
+}
+
+.tag-checkbox input[value="important"] + span {
+  background: #a855f7; /* orange */
+}
+
+.tag-checkbox input[value="urgent"] + span {
+  background: #fb923c; /* yellow */
+}
+
+.tag-checkbox input[value="no-rush"] + span {
+  background: #14b8a6; /* blue */
+}
+
+.tag-checkbox input[type="radio"]:checked + span {
+  border: 3px solid rgb(42, 87, 221);
+  transform: scale(1.15);
+}
+
+.submit-btn {
+  margin-top: 10px;
+  background: #1a1a1a;
+  color: white;
+  padding: 14px;
+  border-radius: 30px;
+  border: none;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.submit-btn:hover {
+  background: #000;
+}
+
+.closeForm {
+  width: 100%;
+  padding: 12px 22px;
+  margin-top: 10px;
+  background-color: #ff4a4a;
+  border: none;
+  color: #ffe1e1;
+  font-weight: 500;
+  border-radius: 100px;
+  text-transform: capitalize;
+  cursor: pointer;
+}
